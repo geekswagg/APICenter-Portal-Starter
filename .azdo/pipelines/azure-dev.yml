@@ -16,13 +16,12 @@ steps:
   - task: setup-azd@0 
     displayName: Install azd
 
-  # If you can't install above task in your organization, you can comment it and uncomment below task to install azd
-  # - task: Bash@3
-  #   displayName: Install azd
-  #   inputs:
-  #     targetType: 'inline'
-  #     script: |
-  #       curl -fsSL https://aka.ms/install-azd.sh | bash
+  - task: Bash@3
+    displayName: Install azd
+    inputs:
+      targetType: 'inline'
+      script: |
+        curl -fsSL https://aka.ms/install-azd.sh | bash
 
   # azd delegate auth to az to use service connection with AzureCLI@2
   - pwsh: |
@@ -32,7 +31,7 @@ steps:
   - task: AzureCLI@2
     displayName: Provision Infrastructure
     inputs:
-      azureSubscription: azconnection
+      azureSubscription: Hewani.Core.Dev
       scriptType: bash
       scriptLocation: inlineScript
       inlineScript: |
@@ -45,7 +44,7 @@ steps:
   - task: AzureCLI@2
     displayName: Deploy Application
     inputs:
-      azureSubscription: azconnection
+      azureSubscription: Hewani.Core.Dev
       scriptType: bash
       scriptLocation: inlineScript
       inlineScript: |
