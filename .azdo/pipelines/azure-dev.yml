@@ -44,7 +44,7 @@ steps:
   - task: AzureCLI@2
     displayName: Deploy Application
     inputs:
-      azureSubscription: azconnection
+      azureSubscription: Hewani.Core.Dev
       scriptType: bash
       scriptLocation: inlineScript
       inlineScript: |
