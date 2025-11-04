@@ -20,7 +20,7 @@
     "dependencies": {
         "@asyncapi/react-component": "^2.5.0",
         "@azure/msal-browser": "^3.13.0",
-        "@fluentui/react-components": "^9.47.5",
+        "@fluentui/react-components": "^9.72.2",
         "@vitejs/plugin-basic-ssl": "^1.2.0",
         "buffer": "^6.0.3",
         "react": "^18.2.0",
